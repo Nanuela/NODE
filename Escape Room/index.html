@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape Room - Laboratório 🧪</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="overlay-inicio" class="overlay-inicio">
+    <div class="mensagem-inicial">
+      <h2>🧪 Bem-vindo ao Laboratório do Cientista Maluco</h2>
+      <p>Você acordou em um laboratório abandonado... Está pronto para escapar?</p>
+      <button onclick="iniciarJogo()">Começar</button>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h1>🧪 Escape Room: Laboratório do Cientista Maluco</h1>
+    <p>Resolva os enigmas científicos e escape do laboratório!</p>
+
+    <div class="objects">
+      <button onclick="abrirEnigma('balao')">🎈 Balão de Gás</button>
+      <button onclick="abrirEnigma('formula')">🧬 Fórmula Química</button>
+      <button onclick="abrirEnigma('cofre')">🔒 Cofre</button>
+      <button onclick="abrirEnigma('painel')">📟 Painel de Controle</button>
+      <button onclick="tentarSair()">🚪 Tentar sair</button>
+    </div>
+
+    <div id="enigma-box" class="enigma-box" style="display:none;">
+      <p id="enigma-pergunta"></p>
+      <input type="text" id="resposta-input" placeholder="Digite sua resposta aqui" />
+      <button onclick="enviarResposta()">Enviar</button>
+      <button onclick="fecharEnigma()">Cancelar</button>
+    </div>
+
+    <div id="feedback"></div>
+    <div id="progresso">Enigmas resolvidos: 0 / 4</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
